@@ -7,6 +7,10 @@
         <entry key="..\:/Users/Toss/AndroidStudioProjects/MemoFilm/app/src/main/res/drawable/tab_selected.xml" value="0.3574074074074074" />
         <entry key="..\:/Users/Toss/AndroidStudioProjects/MemoFilm/app/src/main/res/drawable/tabs_selector.xml" value="0.3574074074074074" />
         <entry key="..\:/Users/Toss/AndroidStudioProjects/MemoFilm/app/src/main/res/layout/activity_account.xml" value="0.3148148148148148" />
+        <entry key="..\:/Users/Toss/AndroidStudioProjects/MemoFilm/app/src/main/res/layout/fragment_tab_favorit.xml" value="0.3875" />
+        <entry key="..\:/Users/Toss/AndroidStudioProjects/MemoFilm/app/src/main/res/layout/fragment_tab_favorite.xml" value="0.3875" />
+        <entry key="..\:/Users/Toss/AndroidStudioProjects/MemoFilm/app/src/main/res/layout/fragment_tab_watched.xml" value="0.3875" />
+        <entry key="..\:/Users/Toss/AndroidStudioProjects/MemoFilm/app/src/main/res/layout/fragment_tab_will_watch.xml" value="0.3875" />
       </map>
     </option>
   </component>

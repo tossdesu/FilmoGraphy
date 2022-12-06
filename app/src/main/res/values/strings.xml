@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MemoFilm</string>
+
+    <!-- Tab Layout -->
+    <string name="title_will_watch">Посмотрю</string>
+    <string name="title_watched">Просмотрены</string>
+    <string name="title_favorite">Любимые</string>
 </resources>
