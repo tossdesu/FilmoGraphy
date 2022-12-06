@@ -3,10 +3,16 @@ package com.tossdesu.memofilm.presentation
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.tossdesu.memofilm.R
+import com.tossdesu.memofilm.databinding.ActivityAccountBinding
 
-class MainActivity : AppCompatActivity() {
+class AccountActivity : AppCompatActivity() {
+
+    private val binding by lazy {
+        ActivityAccountBinding.inflate(layoutInflater)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
     }
 }
