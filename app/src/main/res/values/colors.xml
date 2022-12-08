@@ -8,6 +8,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <!-- Account -->
+    <color name="dividerLineColor">#D8D8D8</color>
+    <color name="avatarColor">#D5D5D5</color>
+
     <!-- Tab Layout Colors -->
     <color name="tabTextColor">#707070</color>
     <color name="tabSelectedBg">#F0F0F0</color>
