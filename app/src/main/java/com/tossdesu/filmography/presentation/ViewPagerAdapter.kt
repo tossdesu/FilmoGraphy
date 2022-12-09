@@ -1,4 +1,4 @@
-package com.tossdesu.memofilm.presentation
+package com.tossdesu.filmography.presentation
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity

@@ -1,4 +1,4 @@
-package com.tossdesu.memofilm
+package com.tossdesu.filmography
 
 import org.junit.Test
 

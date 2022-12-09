@@ -1,11 +1,11 @@
-package com.tossdesu.memofilm.presentation
+package com.tossdesu.filmography.presentation
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.tossdesu.memofilm.R
+import com.tossdesu.filmography.R
 
 class TabWatchedFragment : Fragment() {
     override fun onCreateView(

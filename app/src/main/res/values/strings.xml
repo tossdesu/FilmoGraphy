@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MemoFilm</string>
+    <string name="app_name">FilmoGraphy</string>
 
     <!-- Tab Layout -->
     <string name="title_will_watch">Посмотрю</string>

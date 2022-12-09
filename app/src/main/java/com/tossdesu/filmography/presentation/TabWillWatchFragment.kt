@@ -1,23 +1,23 @@
-package com.tossdesu.memofilm.presentation
+package com.tossdesu.filmography.presentation
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.tossdesu.memofilm.R
+import androidx.fragment.app.Fragment
+import com.tossdesu.filmography.R
 
-class TabFavoriteFragment : Fragment() {
+class TabWillWatchFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tab_favorite, container, false)
+        return inflater.inflate(R.layout.fragment_tab_will_watch, container, false)
     }
 
     companion object {
         @JvmStatic
-        fun newInstance() = TabFavoriteFragment()
+        fun newInstance() = TabWillWatchFragment()
     }
 }
