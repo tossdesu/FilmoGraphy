@@ -28,4 +28,9 @@
         <item name="tabSelectedTextColor">@color/tabTextColor</item>
         <item name="tabTextColor">@color/tabTextColor</item>
     </style>
+    <!-- Transparent status bar. -->
+    <style name="TransparentStatusBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
 </resources>

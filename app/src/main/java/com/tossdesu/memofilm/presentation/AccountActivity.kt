@@ -1,7 +1,10 @@
 package com.tossdesu.memofilm.presentation
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.view.WindowManager
 import com.google.android.material.tabs.TabLayoutMediator
 import com.tossdesu.memofilm.R
 import com.tossdesu.memofilm.databinding.ActivityAccountBinding

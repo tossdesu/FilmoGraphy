@@ -3,6 +3,6 @@
 
     <!-- Tab Layout -->
     <string name="title_will_watch">Посмотрю</string>
-    <string name="title_watched">Просмотрено</string>
+    <string name="title_watched">Просмотрен</string>
     <string name="title_favorite">Любимые</string>
 </resources>
