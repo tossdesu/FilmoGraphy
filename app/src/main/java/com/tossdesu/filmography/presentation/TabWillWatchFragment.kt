@@ -5,17 +5,37 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.tossdesu.filmography.R
+import androidx.navigation.fragment.findNavController
+import com.tossdesu.filmography.databinding.FragmentTabWillWatchBinding
 
 class TabWillWatchFragment : Fragment() {
+
+    private var _binding: FragmentTabWillWatchBinding? = null
+    private val binding: FragmentTabWillWatchBinding
+        get() = _binding ?: throw RuntimeException("FragmentTabWillWatchBinding = null")
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tab_will_watch, container, false)
+    ): View {
+        _binding = FragmentTabWillWatchBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.buttonFilmInfo.setOnClickListener {
+            findNavController().navigate(
+                AccountFragmentDirections.actionAccountFragmentToFilmInfoFragment(1412)
+            )
+        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
     companion object {
         @JvmStatic
         fun newInstance() = TabWillWatchFragment()

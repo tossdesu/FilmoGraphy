@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/accountFragment">
+    <fragment
+        android:id="@+id/filmsFragment"
+        android:name="com.tossdesu.filmography.presentation.FilmsFragment"
+        android:label="fragment_films"
+        tools:layout="@layout/fragment_films" >
+        <action
+            android:id="@+id/action_filmsFragment_to_filmInfoFragment"
+            app:destination="@id/filmInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.tossdesu.filmography.presentation.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_filmInfoFragment"
+            app:destination="@id/filmInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filmInfoFragment"
+        android:name="com.tossdesu.filmography.presentation.FilmInfoFragment"
+        android:label="fragment_film_info"
+        tools:layout="@layout/fragment_film_info" >
+        <argument
+            android:name="filmId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.tossdesu.filmography.presentation.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" >
+        <action
+            android:id="@+id/action_accountFragment_to_filmInfoFragment"
+            app:destination="@id/filmInfoFragment" />
+    </fragment>
+</navigation>

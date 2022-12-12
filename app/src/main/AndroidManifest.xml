@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MemoFilm">
         <activity
-            android:name=".presentation.AccountActivity"
+            android:name=".presentation.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@style/TransparentStatusBar">

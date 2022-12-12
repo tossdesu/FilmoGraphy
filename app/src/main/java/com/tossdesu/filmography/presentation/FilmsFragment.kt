@@ -6,19 +6,19 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.tossdesu.filmography.databinding.FragmentTabWatchedBinding
+import com.tossdesu.filmography.databinding.FragmentFilmsBinding
 
-class TabWatchedFragment : Fragment() {
+class FilmsFragment : Fragment() {
 
-    private var _binding: FragmentTabWatchedBinding? = null
-    private val binding: FragmentTabWatchedBinding
-        get() = _binding ?: throw RuntimeException("FragmentTabWatchedBinding = null")
+    private var _binding: FragmentFilmsBinding? = null
+    private val binding: FragmentFilmsBinding
+        get() = _binding ?: throw RuntimeException("FragmentFilmsBinding = null")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentTabWatchedBinding.inflate(inflater, container, false)
+        _binding = FragmentFilmsBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -27,7 +27,7 @@ class TabWatchedFragment : Fragment() {
 
         binding.buttonFilmInfo.setOnClickListener {
             findNavController().navigate(
-                AccountFragmentDirections.actionAccountFragmentToFilmInfoFragment(1400)
+                FilmsFragmentDirections.actionFilmsFragmentToFilmInfoFragment(1000)
             )
         }
     }
@@ -35,10 +35,5 @@ class TabWatchedFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
-
-    companion object {
-        @JvmStatic
-        fun newInstance() = TabWatchedFragment()
     }
 }
