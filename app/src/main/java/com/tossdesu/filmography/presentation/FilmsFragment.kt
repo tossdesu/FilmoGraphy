@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.tossdesu.filmography.databinding.FragmentFilmsBinding
 
 class FilmsFragment : Fragment() {
@@ -26,14 +25,17 @@ class FilmsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonFilmInfo.setOnClickListener {
-            findNavController().navigate(
-                FilmsFragmentDirections.actionFilmsFragmentToFilmInfoFragment(1000)
-            )
+
         }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    companion object {
+
+        fun newInstance() = FilmsFragment()
     }
 }

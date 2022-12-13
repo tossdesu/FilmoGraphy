@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
+import com.tossdesu.filmography.R
 import com.tossdesu.filmography.databinding.FragmentTabWatchedBinding
 
 class TabWatchedFragment : Fragment() {
@@ -26,9 +26,7 @@ class TabWatchedFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonFilmInfo.setOnClickListener {
-            findNavController().navigate(
-                AccountFragmentDirections.actionAccountFragmentToFilmInfoFragment(1400)
-            )
+            launchFilmInfoFragment(99)
         }
     }
 
@@ -37,8 +35,15 @@ class TabWatchedFragment : Fragment() {
         _binding = null
     }
 
+    private fun launchFilmInfoFragment(filmId: Int) {
+        requireActivity().supportFragmentManager.beginTransaction()
+            .replace(R.id.bottomNavFragmentContainer, FilmInfoFragment.newInstance(filmId))
+            .addToBackStack(null)
+            .commit()
+    }
+
     companion object {
-        @JvmStatic
+
         fun newInstance() = TabWatchedFragment()
     }
 }

@@ -8,26 +8,13 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayoutMediator
 import com.tossdesu.filmography.R
 import com.tossdesu.filmography.databinding.FragmentAccountBinding
+import com.tossdesu.filmography.domain.entity.TabItems
 
 class AccountFragment : Fragment() {
 
     private var _binding: FragmentAccountBinding? = null
     private val binding: FragmentAccountBinding
         get() = _binding ?: throw RuntimeException("FragmentAccountBinding = null")
-
-    private val fragmentList = listOf(
-        TabWillWatchFragment.newInstance(),
-        TabWatchedFragment.newInstance(),
-        TabFavoriteFragment.newInstance()
-    )
-
-    private val fragTitlesList by lazy {
-        listOf(
-            getString(R.string.title_will_watch),
-            getString(R.string.title_watched),
-            getString(R.string.title_favorite)
-        )
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -44,15 +31,25 @@ class AccountFragment : Fragment() {
     }
 
     private fun initViewPagerAdapter() {
-        val vpAdapter = ViewPagerAdapter(requireActivity(), fragmentList)
+        val vpAdapter = ViewPagerAdapter(requireActivity())
         binding.vpFragmentsContainer.adapter = vpAdapter
         TabLayoutMediator(binding.tabLayout, binding.vpFragmentsContainer) { tabItem, posItem ->
-            tabItem.text = fragTitlesList[posItem]
+            tabItem.text = when(posItem) {
+                TabItems.WILL_WATCH.ordinal -> getString(R.string.title_will_watch)
+                TabItems.WATCHED.ordinal -> getString(R.string.title_watched)
+                TabItems.FAVORITE.ordinal -> getString(R.string.title_favorite)
+                else -> throw RuntimeException("Have no title for posItem = $posItem")
+            }
         }.attach()
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    companion object {
+
+        fun newInstance() = AccountFragment()
     }
 }
