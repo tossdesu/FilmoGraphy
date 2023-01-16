@@ -1,4 +1,10 @@
 <resources>
+    <!-- Splash screen theme -->
+    <style name="Theme.SplashLauncher" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
     <!-- Base application theme -->
     <style name="Theme.FilmoGraphy" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color -->

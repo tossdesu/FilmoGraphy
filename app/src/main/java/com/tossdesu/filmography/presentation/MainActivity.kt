@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     private val searchFragment = SearchFragment.newInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(R.style.Theme_FilmoGraphy)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
