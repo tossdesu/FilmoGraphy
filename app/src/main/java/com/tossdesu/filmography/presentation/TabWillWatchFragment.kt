@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.tossdesu.filmography.R
 import com.tossdesu.filmography.databinding.FragmentTabWillWatchBinding
 
 class TabWillWatchFragment : Fragment() {
@@ -22,24 +21,9 @@ class TabWillWatchFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        binding.buttonFilmInfo.setOnClickListener {
-            launchFilmInfoFragment(98)
-        }
-    }
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
-
-    private fun launchFilmInfoFragment(filmId: Int) {
-        requireActivity().supportFragmentManager.beginTransaction()
-            .replace(R.id.bottomNavFragmentContainer, FilmInfoFragment.newInstance(filmId))
-            .addToBackStack(null)
-            .commit()
     }
 
     companion object {

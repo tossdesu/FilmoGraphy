@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.transition.Fade
+import androidx.transition.TransitionManager
 import com.tossdesu.filmography.R
 import com.tossdesu.filmography.databinding.ActivityMainBinding
 
@@ -33,11 +35,17 @@ class MainActivity : AppCompatActivity() {
                 R.id.filmsFragment -> filmsFragment
                 R.id.searchFragment -> searchFragment
                 else ->
-                    throw RuntimeException("Have no fragment for bottomNavBar item id = ${it.itemId}")
+                    throw RuntimeException("Have no fragment for bottomNavBar item ID = ${it.itemId}")
             }
             launchCurrentFragment(fragment)
             true
         }
+    }
+
+    private fun launchCurrentFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.bottomNavFragmentContainer, fragment)
+            .commit()
     }
 
     private fun setFilmInfoFragmentAttachListener() {
@@ -51,16 +59,15 @@ class MainActivity : AppCompatActivity() {
     private fun setFilmInfoFragmentDetachListener() {
         supportFragmentManager.apply {
             addOnBackStackChangedListener {
-                if (fragments[fragments.size-1] !is FilmInfoFragment) {
+                if (fragments[fragments.size - 1] !is FilmInfoFragment) {
+                    val transition = Fade(Fade.IN)
+                        .setDuration(350)
+                        .addTarget(binding.bottomNavBar)
+                        .setStartDelay(300)
+                    TransitionManager.beginDelayedTransition(binding.root, transition)
                     binding.bottomNavBar.visibility = View.VISIBLE
                 }
             }
         }
-    }
-
-    private fun launchCurrentFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.bottomNavFragmentContainer, fragment)
-            .commit()
     }
 }

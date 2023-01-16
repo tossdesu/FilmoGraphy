@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Films statistic numbers in Account fragment -->
+    <style name="FilmsStatisticNumbers" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.FilmsStatisticNumbers</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- Shapeable image view corners -->
+    <style name="RoundedCorners">
+        <item name="cornerSize">5%</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+    <!-- Film poster small image sizes -->
+    <style name="PosterImage">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">225dp</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <!-- Bottom Sheet Dialog -->
+    <style name="BottomSheetStyle" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="android:elevation">0dp</item>
+    </style>
+</resources>

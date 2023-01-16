@@ -1,25 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/gray_100"
+    android:orientation="vertical"
     tools:context=".presentation.FilmsFragment">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="150dp"
-        android:text="Films"
+        android:layout_gravity="start"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="5dp"
+        android:text="Фильмы"
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/buttonFilmInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="200dp"
-        android:text="Film Info" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:columnCount="2">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivPoster1"
+                style="@style/PosterImage"
+                android:src="@drawable/poster_1"
+                app:shapeAppearanceOverlay="@style/RoundedCorners" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivPoster2"
+                style="@style/PosterImage"
+                android:src="@drawable/poster_2"
+                app:shapeAppearanceOverlay="@style/RoundedCorners" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivPoster3"
+                style="@style/PosterImage"
+                android:src="@drawable/poster_3"
+                app:shapeAppearanceOverlay="@style/RoundedCorners" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivPoster4"
+                style="@style/PosterImage"
+                android:src="@drawable/poster_4"
+                app:shapeAppearanceOverlay="@style/RoundedCorners" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivPoster5"
+                style="@style/PosterImage"
+                android:src="@drawable/poster_5"
+                app:shapeAppearanceOverlay="@style/RoundedCorners" />
+
+        </GridLayout>
+
+    </ScrollView>
+
+</LinearLayout>
