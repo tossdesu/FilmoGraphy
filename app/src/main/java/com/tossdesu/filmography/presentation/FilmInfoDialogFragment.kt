@@ -16,7 +16,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.tossdesu.filmography.R
 import com.tossdesu.filmography.databinding.BottomDialogLayoutBinding
 
-class BottomDialogFilmInfoFragment : BottomSheetDialogFragment() {
+class FilmInfoDialogFragment : BottomSheetDialogFragment() {
 
     private lateinit var bottomSheetDialog: BottomSheetDialog
     private lateinit var dialogBehavior: BottomSheetBehavior<FrameLayout>
@@ -36,7 +36,7 @@ class BottomDialogFilmInfoFragment : BottomSheetDialogFragment() {
         return super.onCreateDialog(savedInstanceState).apply {
             setOnKeyListener { _, keyCode, keyEvent ->
                 if (keyCode == KeyEvent.KEYCODE_BACK && keyEvent.action == KeyEvent.ACTION_UP) {
-                    this@BottomDialogFilmInfoFragment.bottomSheetDialog.dismiss()
+                    this@FilmInfoDialogFragment.bottomSheetDialog.dismiss()
                     returnToFilmRequestSourceFragment()
                     return@setOnKeyListener true
                 }
@@ -119,7 +119,7 @@ class BottomDialogFilmInfoFragment : BottomSheetDialogFragment() {
 
     private fun returnToFilmRequestSourceFragment() {
         requireActivity().supportFragmentManager.popBackStack(
-            FilmInfoFragment.NAME,
+            FilmPosterFragment.NAME,
             FragmentManager.POP_BACK_STACK_INCLUSIVE
         )
     }
@@ -133,8 +133,8 @@ class BottomDialogFilmInfoFragment : BottomSheetDialogFragment() {
         private const val DIALOG_PEEK_HEIGHT_DEFAULT = 0
         private const val DIALOG_PEEK_HEIGHT = "dialog_peek_height"
 
-        fun newInstance(dialogPeekHeight: Int): BottomDialogFilmInfoFragment {
-            return BottomDialogFilmInfoFragment().apply {
+        fun newInstance(dialogPeekHeight: Int): FilmInfoDialogFragment {
+            return FilmInfoDialogFragment().apply {
                 arguments = Bundle().apply {
                         putInt(DIALOG_PEEK_HEIGHT, dialogPeekHeight)
                 }

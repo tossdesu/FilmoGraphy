@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/gray_200"
-    tools:context=".presentation.FilmInfoFragment">
+    tools:context=".presentation.FilmPosterFragment">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/ivPoster"

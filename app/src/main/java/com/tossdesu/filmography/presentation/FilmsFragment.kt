@@ -48,8 +48,8 @@ class FilmsFragment : Fragment() {
         requireActivity().supportFragmentManager
             .beginTransaction()
             .addSharedElement(posterView, imageResId.toString())
-            .replace(R.id.bottomNavFragmentContainer, FilmInfoFragment.newInstance(imageResId))
-            .addToBackStack(FilmInfoFragment.NAME)
+            .replace(R.id.bottomNavFragmentContainer, FilmPosterFragment.newInstance(imageResId))
+            .addToBackStack(FilmPosterFragment.NAME)
             .commit()
     }
 

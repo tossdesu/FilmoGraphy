@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setFilmInfoFragmentAttachListener() {
         supportFragmentManager.addFragmentOnAttachListener { _, fragment ->
-            if (fragment is FilmInfoFragment) {
+            if (fragment is FilmPosterFragment) {
                 binding.bottomNavBar.visibility = View.GONE
             }
         }
@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() {
     private fun setFilmInfoFragmentDetachListener() {
         supportFragmentManager.apply {
             addOnBackStackChangedListener {
-                if (fragments[fragments.size - 1] !is FilmInfoFragment) {
+                if (fragments[fragments.size - 1] !is FilmPosterFragment) {
                     val transition = Fade(Fade.IN)
                         .setDuration(350)
                         .addTarget(binding.bottomNavBar)

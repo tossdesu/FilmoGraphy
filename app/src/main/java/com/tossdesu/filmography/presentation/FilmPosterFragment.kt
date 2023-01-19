@@ -13,7 +13,7 @@ import com.google.android.material.transition.MaterialContainerTransform
 import com.tossdesu.filmography.R
 import com.tossdesu.filmography.databinding.FragmentFilmInfoBinding
 
-class FilmInfoFragment : Fragment() {
+class FilmPosterFragment : Fragment() {
 
     private var _binding: FragmentFilmInfoBinding? = null
     private val binding: FragmentFilmInfoBinding
@@ -88,7 +88,7 @@ class FilmInfoFragment : Fragment() {
     }
 
     private fun launchBottomDialogFragment(dialogPeekHeight: Int) {
-        BottomDialogFilmInfoFragment
+        FilmInfoDialogFragment
             .newInstance(dialogPeekHeight)
             .show(requireActivity().supportFragmentManager, DIALOG_TAG)
     }
@@ -103,8 +103,8 @@ class FilmInfoFragment : Fragment() {
         private const val POSTER_IMG_WIDTH_PERCENT = 65.0
         private const val POSTER_IMG_BOTTOM_MARGIN = 120
 
-        fun newInstance(imageResId: Int): FilmInfoFragment {
-            return FilmInfoFragment().apply {
+        fun newInstance(imageResId: Int): FilmPosterFragment {
+            return FilmPosterFragment().apply {
                 arguments = Bundle().apply {
                     putInt(IMG_RES_ID, imageResId)
                 }
