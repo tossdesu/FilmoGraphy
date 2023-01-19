@@ -4,9 +4,9 @@
 Это мой небольшой пет проект для закрепление знаний и навыков в мобильной разработке.
 <br>
 <br>
-<b>На данный момент подготовил UI, далее бизнес логика и доработка Presentation слоя и т.д..</b>
+<b>На данный момент подготовил UI и бизнес логику, далее доработка Presentation слоя и т.д..</b>
 <br>
-В качестве источника информация по фильмам используется API <a href="https://kinopoiskapiunofficial.tech/" target="_blank">Kinopoisk Api Unofficial</a>
+В качестве источника информации по фильмам используется API <a href="https://kinopoiskapiunofficial.tech/" target="_blank">Kinopoisk Api Unofficial</a>
 <br>
 <br>
 Что будет использоваться или уже используется для написания этого приложения:
