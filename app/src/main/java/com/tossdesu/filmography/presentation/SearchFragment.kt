@@ -8,8 +8,9 @@ import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import androidx.fragment.app.Fragment
 import com.tossdesu.filmography.databinding.FragmentSearchBinding
+import javax.inject.Inject
 
-class SearchFragment : Fragment() {
+class SearchFragment @Inject constructor() : Fragment() {
 
     private var _binding: FragmentSearchBinding? = null
     private val binding: FragmentSearchBinding
