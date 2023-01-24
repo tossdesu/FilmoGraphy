@@ -27,16 +27,7 @@ class FilmSelectionsFragment @Inject constructor() : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 //        ViewCompat.setTransitionName(binding.ivPoster1, binding.ivPoster1.id.toString())
-//        ViewCompat.setTransitionName(binding.ivPoster2, binding.ivPoster2.id.toString())
-//        ViewCompat.setTransitionName(binding.ivPoster3, binding.ivPoster3.id.toString())
-//        ViewCompat.setTransitionName(binding.ivPoster4, binding.ivPoster4.id.toString())
-//        ViewCompat.setTransitionName(binding.ivPoster5, binding.ivPoster5.id.toString())
-//
 //        binding.ivPoster1.setOnClickListener { launchFilmInfoFragment(it, R.drawable.poster_1) }
-//        binding.ivPoster2.setOnClickListener { launchFilmInfoFragment(it, R.drawable.poster_2) }
-//        binding.ivPoster3.setOnClickListener { launchFilmInfoFragment(it, R.drawable.poster_3) }
-//        binding.ivPoster4.setOnClickListener { launchFilmInfoFragment(it, R.drawable.poster_4) }
-//        binding.ivPoster5.setOnClickListener { launchFilmInfoFragment(it, R.drawable.poster_5) }
     }
 
     override fun onDestroyView() {
