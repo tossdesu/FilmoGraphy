@@ -8,6 +8,7 @@ import androidx.transition.Fade
 import androidx.transition.TransitionManager
 import com.tossdesu.filmography.R
 import com.tossdesu.filmography.databinding.ActivityMainBinding
+import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,12 +16,22 @@ class MainActivity : AppCompatActivity() {
         ActivityMainBinding.inflate(layoutInflater)
     }
 
-    private val accountFragment = AccountFragment.newInstance()
-    private val filmsFragment = FilmsFragment.newInstance()
-    private val searchFragment = SearchFragment.newInstance()
+    @Inject
+    lateinit var accountFragment: AccountFragment
+
+    @Inject
+    lateinit var filmSelectionsFragment: FilmSelectionsFragment
+
+    @Inject
+    lateinit var searchFragment: SearchFragment
+
+    private val component by lazy {
+        (application as FilmoGraphyApp).component
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.Theme_FilmoGraphy)
+        component.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
@@ -33,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavBar.setOnItemSelectedListener {
             val fragment = when(it.itemId) {
                 R.id.accountFragment -> accountFragment
-                R.id.filmsFragment -> filmsFragment
+                R.id.filmsFragment -> filmSelectionsFragment
                 R.id.searchFragment -> searchFragment
                 else ->
                     throw RuntimeException("Have no fragment for bottomNavBar item ID = ${it.itemId}")

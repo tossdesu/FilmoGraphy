@@ -11,13 +11,6 @@
         <item name="cornerSize">5%</item>
         <item name="cornerFamily">rounded</item>
     </style>
-    <!-- Film poster small image sizes -->
-    <style name="PosterImage">
-        <item name="android:layout_width">150dp</item>
-        <item name="android:layout_height">225dp</item>
-        <item name="android:layout_margin">10dp</item>
-        <item name="android:scaleType">fitXY</item>
-    </style>
 
     <!-- Bottom Sheet Dialog -->
     <style name="BottomSheetStyle" parent="Widget.MaterialComponents.BottomSheet.Modal">

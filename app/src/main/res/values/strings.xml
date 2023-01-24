@@ -1,15 +1,18 @@
 <resources>
     <string name="app_name">FilmoGraphy</string>
 
+    <!-- Account Fragment -->
+    <string name="films_list_empty_title">Список пуст</string>
+    <string name="films_list_empty">Воспользуйтесь поиском или нашей подборкой фильмов для их добавления в список</string>
+    <string name="logotype">Логотип</string>
+
     <!-- Tab Layout -->
     <string name="title_will_watch">В планах</string>
     <string name="title_watched">Посмотрены</string>
     <string name="title_favorite">Любимые</string>
 
-    <string name="logotype">Логотип</string>
+    <!-- Film Selections Fragment -->
+    <string name="top_rated_selection">Популярные фильмы</string>
+
     <string name="film_description">Один телефонный звонок может изменить всю жизнь человека или даже оборвать ее. Герой фильма Стью Шеферд становится пленником телефонной будки.\n\nЧто вы сделаете, если услышите, как в телефонной будке зазвонил телефон? Скорее всего, инстинктивно поднимете трубку, хотя прекрасно знаете, что кто-то просто ошибся номером. Вот и Стью кажется, что на звонок надо обязательно ответить, а в результате он оказывается втянутым в чудовищную игру. «Только положи трубку, и ты – труп», – говорит ему невидимый собеседник. Один телефонный звонок может изменить всю жизнь человека или даже оборвать ее.</string>
-
-    <string name="films_list_empty_title">Список пуст</string>
-    <string name="films_list_empty">Воспользуйтесь поиском или нашей подборкой фильмов для их добавления в список</string>
-
 </resources>

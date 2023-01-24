@@ -9,8 +9,9 @@ import com.google.android.material.tabs.TabLayoutMediator
 import com.tossdesu.filmography.R
 import com.tossdesu.filmography.databinding.FragmentAccountBinding
 import com.tossdesu.filmography.domain.entity.TabItems
+import javax.inject.Inject
 
-class AccountFragment : Fragment() {
+class AccountFragment @Inject constructor() : Fragment() {
 
     private var _binding: FragmentAccountBinding? = null
     private val binding: FragmentAccountBinding
