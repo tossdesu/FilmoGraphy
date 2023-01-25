@@ -59,9 +59,4 @@ class SearchFragment @Inject constructor() : Fragment() {
     private fun clearSearchView() {
         binding.searchView.setQuery("", false)
     }
-
-    companion object {
-
-        fun newInstance() = SearchFragment()
-    }
 }

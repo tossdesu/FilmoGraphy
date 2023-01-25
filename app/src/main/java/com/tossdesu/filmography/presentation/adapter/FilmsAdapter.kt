@@ -6,8 +6,9 @@ import androidx.recyclerview.widget.ListAdapter
 import com.bumptech.glide.Glide
 import com.tossdesu.filmography.databinding.ItemFilmBinding
 import com.tossdesu.filmography.domain.entity.FilmBriefData
+import javax.inject.Inject
 
-class FilmsAdapter : ListAdapter<FilmBriefData, FilmHolder>(FilmDiffCallback()) {
+class FilmsAdapter @Inject constructor() : ListAdapter<FilmBriefData, FilmHolder>(FilmDiffCallback()) {
 
     var setOnClickListener: ((Int) -> Unit)? = null
     var setOnLongClickListener: ((FilmBriefData) -> Unit)? = null

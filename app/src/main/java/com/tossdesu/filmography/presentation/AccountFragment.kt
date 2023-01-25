@@ -9,9 +9,13 @@ import com.google.android.material.tabs.TabLayoutMediator
 import com.tossdesu.filmography.R
 import com.tossdesu.filmography.databinding.FragmentAccountBinding
 import com.tossdesu.filmography.domain.entity.TabItems
+import com.tossdesu.filmography.presentation.adapter.ViewPagerAdapter
 import javax.inject.Inject
 
 class AccountFragment @Inject constructor() : Fragment() {
+
+    @Inject
+    lateinit var viewPagerAdapter: ViewPagerAdapter
 
     private var _binding: FragmentAccountBinding? = null
     private val binding: FragmentAccountBinding
@@ -47,10 +51,5 @@ class AccountFragment @Inject constructor() : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
-
-    companion object {
-
-        fun newInstance() = AccountFragment()
     }
 }

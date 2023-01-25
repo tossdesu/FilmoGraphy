@@ -70,9 +70,11 @@ class FilmPosterFragment : Fragment() {
     }
 
     private fun setPosterImage() {
-        binding.ivPoster.setImageResource(imageResId)
-        binding.ivPoster.layoutParams.width = getPosterWidth()
-        binding.ivPoster.requestLayout()
+        with(binding.ivPoster) {
+            setImageResource(imageResId)
+            layoutParams.width = getPosterWidth()
+            requestLayout()
+        }
     }
 
     private fun getPosterWidth(): Int {

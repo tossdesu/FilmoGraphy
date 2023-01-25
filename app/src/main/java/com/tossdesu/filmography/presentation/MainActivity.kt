@@ -18,10 +18,8 @@ class MainActivity : AppCompatActivity() {
 
     @Inject
     lateinit var accountFragment: AccountFragment
-
     @Inject
     lateinit var filmSelectionsFragment: FilmSelectionsFragment
-
     @Inject
     lateinit var searchFragment: SearchFragment
 
