@@ -1,5 +1,5 @@
 # FilmoGraphy 
-This app for movie searching and adding them to lists: liked, watched, will watch.
+This is an app for movie searching and adding them to lists: liked, watched, will watch.
 <br>
 This is my small pet project to consolidate knowledge and skills in mobile development.
 <br>
