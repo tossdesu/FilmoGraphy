@@ -4,21 +4,21 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import com.bumptech.glide.Glide
-import com.tossdesu.filmography.databinding.ItemFilmBinding
+import com.tossdesu.filmography.databinding.ItemFilmBigBinding
 import com.tossdesu.filmography.domain.entity.FilmBriefData
 import javax.inject.Inject
 
-class FilmsAdapter @Inject constructor() : ListAdapter<FilmBriefData, FilmHolder>(FilmDiffCallback()) {
+class FilmsBigAdapter @Inject constructor() : ListAdapter<FilmBriefData, FilmBigHolder>(FilmDiffCallback()) {
 
     var setOnClickListener: ((Int) -> Unit)? = null
     var setOnLongClickListener: ((FilmBriefData) -> Unit)? = null
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FilmHolder {
-        val binding = ItemFilmBinding.inflate(LayoutInflater.from(parent.context))
-        return FilmHolder(binding)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FilmBigHolder {
+        val binding = ItemFilmBigBinding.inflate(LayoutInflater.from(parent.context))
+        return FilmBigHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: FilmHolder, position: Int) {
+    override fun onBindViewHolder(holder: FilmBigHolder, position: Int) {
         val item = getItem(holder.adapterPosition)
         with(holder.binding) {
             tvTitle.text = item.nameRu

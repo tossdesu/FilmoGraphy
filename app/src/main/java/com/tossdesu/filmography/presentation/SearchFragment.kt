@@ -42,12 +42,12 @@ class SearchFragment @Inject constructor() : Fragment() {
 
     private fun setSearchViewListeners() {
         binding.searchView.setOnQueryTextFocusChangeListener { view, hasFocus ->
+            val manager = requireActivity()
+                .getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
             if (hasFocus) {
-                view.postDelayed({
-                    val manager = requireActivity()
-                        .getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-                    manager.showSoftInput(view.findFocus(), 0)
-                }, 200)
+                manager.showSoftInput(view.findFocus(), 0)
+            } else {
+                manager.hideSoftInputFromWindow(view.windowToken, 0)
             }
         }
         binding.searchView.setOnCloseListener {

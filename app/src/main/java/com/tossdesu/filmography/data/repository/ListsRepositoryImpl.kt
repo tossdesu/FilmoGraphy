@@ -1,4 +1,4 @@
-package com.tossdesu.filmography.data
+package com.tossdesu.filmography.data.repository
 
 import com.tossdesu.filmography.domain.ListsRepository
 import com.tossdesu.filmography.domain.entity.FilmBriefData

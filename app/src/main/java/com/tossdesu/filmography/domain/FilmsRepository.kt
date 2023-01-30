@@ -12,9 +12,9 @@ interface FilmsRepository {
     fun searchFilmByTitleUseCase(searchTitle: String): List<FilmBriefData>
 
     /** GET FILM COLLECTIONS **/
-    fun getTopRatingFilmsUseCase(): List<FilmBriefData>
+    suspend fun getPopularFilmsUseCase(): List<FilmBriefData>?
 
-    fun getPremiereFilmsUseCase(): List<FilmBriefData>
+    suspend fun getPremiereFilmsUseCase(): List<FilmBriefData>?
 
-    fun getTopAwaitFilmsUseCase(): List<FilmBriefData>
+    suspend fun getTop250FilmsUseCase(): List<FilmBriefData>?
 }

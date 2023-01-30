@@ -12,10 +12,6 @@ import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
 
-    private val binding: ActivityMainBinding by lazy {
-        ActivityMainBinding.inflate(layoutInflater)
-    }
-
     @Inject
     lateinit var accountFragment: AccountFragment
     @Inject
@@ -27,11 +23,19 @@ class MainActivity : AppCompatActivity() {
         (application as FilmoGraphyApp).component
     }
 
+    private val binding: ActivityMainBinding by lazy {
+        ActivityMainBinding.inflate(layoutInflater)
+    }
+
+    private lateinit var currentFragment: Fragment
+
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.Theme_FilmoGraphy)
         component.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+        currentFragment = accountFragment
 
         setOnBottomNavBarSelectListener()
         setFilmInfoFragmentAttachListener()
@@ -47,15 +51,29 @@ class MainActivity : AppCompatActivity() {
                 else ->
                     throw RuntimeException("Have no fragment for bottomNavBar item ID = ${it.itemId}")
             }
-            launchCurrentFragment(fragment)
+            showFragment(fragment)
             true
         }
     }
 
-    private fun launchCurrentFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.bottomNavFragmentContainer, fragment)
-            .commit()
+    private fun showFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction().apply {
+            if (!fragment.isAdded) {
+                add(R.id.bottomNavFragmentContainer, fragment)
+            }
+            if (currentFragment is SearchFragment) {
+                detach(currentFragment)
+            } else {
+                hide(currentFragment)
+            }
+            if (fragment is SearchFragment) {
+                attach(fragment)
+            } else {
+                show(fragment)
+            }
+            commit()
+        }
+        currentFragment = fragment
     }
 
     private fun setFilmInfoFragmentAttachListener() {

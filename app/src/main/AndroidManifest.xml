@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tossdesu.filmography">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".presentation.FilmoGraphyApp"
         android:allowBackup="true"
@@ -13,7 +15,8 @@
         <activity
             android:name=".presentation.MainActivity"
             android:exported="true"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
