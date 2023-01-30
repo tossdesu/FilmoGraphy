@@ -4,7 +4,7 @@ This is an app for movie searching and adding them to lists: liked, watched, wil
 This is my small pet project to consolidate knowledge and skills in mobile development.
 <br>
 <br>
-<b>At the moment prepared UI, business logic and added DI. Now working on the Presentation layer.</b>
+<b>At the moment added an ability to download film collections without detail info about each one. Now working on getting detail film info.</b>
 <br>
 As a source of information on films is used API <a href="https://kinopoiskapiunofficial.tech/" target="_blank">Kinopoisk Api Unofficial</a>
 <br>
@@ -12,7 +12,7 @@ As a source of information on films is used API <a href="https://kinopoiskapiuno
 What will be or already used to write this app:
 <ul>
   <li>Clean Architecture
-  <li>MVVM
+  <li>MVVM + State
   <li>Room
   <li>Retrofit2
   <li>Dagger2
