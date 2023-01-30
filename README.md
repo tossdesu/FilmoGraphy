@@ -22,7 +22,7 @@ What will be or already used to write this app:
   <li>ViewModel
 </ul>
 <br>
-Video of how the application looks now in general and a small part of the functionality witch will be in future with demo materials.
+Video of how the app looks now in general and a small part of the functionality witch will be in future. With demo materials.
 <br>
 
 https://user-images.githubusercontent.com/11453432/212863642-4440cd9d-2484-481b-a570-177e746cf6ca.mp4
