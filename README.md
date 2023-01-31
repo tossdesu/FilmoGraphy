@@ -12,7 +12,7 @@ As a source of information on films is used API <a href="https://kinopoiskapiuno
 What will be or already used to write this app:
 <ul>
   <li>Clean Architecture
-  <li>MVVM + State
+  <li>MVVM
   <li>Room
   <li>Retrofit2
   <li>Dagger2
